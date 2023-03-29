@@ -22,12 +22,7 @@ Once your JupyterLab Session starts, Click Connect to JupyterLab button
 
 ![Connect to Running JupyterLab](./images/jupyterlab-running.png)
 
-From there, Click on File -> New Launcher and then click on terminal to get the terminal
-
-![Shell Access In Jupyter](./images/terminal-start.png)
-
-
-From there, start a shell by clicking the menu (Clusters > Shell), and check out the repostitory:
+From there, Click on File -> New and then click on Terminal to get the terminal
 
 ![Shell Access In Jupyter](./images/terminal-start.png)
 
