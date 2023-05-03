@@ -12,7 +12,7 @@ To start a Jupyter notebook server, Click on Interactive Apps and then select Ju
 When launching the Jupyter Lab, it is important to select the following
 * For Cluster specify Discovery
 * For Account specify osinski_982
-* For Partition specify condorsub
+* For Partition specify htcondor
 
 The above are important to ensure you start a JupyterLab Server on a node, that has HTCondor installed and preconfigured to submit your workflows
 
