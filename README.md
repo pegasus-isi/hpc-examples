@@ -32,7 +32,7 @@ Once in the terminal clone this GitHub Repository
 $ git clone https://github.com/pegasus-isi/pegasus-usc-tutorial.git
 ```
 
-In Jupyter, navigate to the example you are interested in, and step through the notebook. Once the workflow is submitted, you have to add compute resources with HTCondor Annex.
+In Jupyter, navigate to the example you are interested in, and step through the notebook. 
 
 For first time users, we highly recommend to do the notebooks in order, as they build up on concepts in the previous notebooks.
 
