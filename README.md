@@ -17,10 +17,7 @@ When launching the Jupyter Lab, it is important to select the following
 * Set Memory to 1GB
 * Set the number of hours to 4
 
-For the "Managing workflows on HPC with Pegasus WMS" workshop, please do the above with the following change:
-* For Account, specify osinski_982
-
-For the CARC Boot Camp 2023, please do the above with the following change:
+For the CARC Boot Camp 2024, please do the above with the following change:
 * For Account, specify hpcsuppt_613
 
 The above settings are important to ensure you start a JupyterLab Server on a node that has HTCondor installed and preconfigured to submit your workflows
