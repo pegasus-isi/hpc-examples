@@ -3,7 +3,7 @@
 This repository contains preconfigured Pegasus Workflows examples including the Pegasus Tutorial, to run on USC CARC Discovery Cluster resources. 
 
 ## Getting Started
-To get started, use a web browser and log on to USC OnDemand Instance at https://ondemand.carc.usc.edu . You need to be on USC Network and need to your USC credentials to log in. More details on how to logon to USC Open OnDemand can be found at https://www.carc.usc.edu/user-information/user-guides/hpc-basics/getting-started-ondemand
+To get started, use a web browser and log on to USC OnDemand Instance at https://ondemand.carc.usc.edu . You need to be on USC Network and need to your USC credentials to log in. More details on how to logon to USC Open OnDemand can be found at https://www.carc.usc.edu/user-guides/carc-ondemand/ondemand-overview
 
 To start a Jupyter notebook server, Click on Interactive Apps and then select JupyterLab.
 
