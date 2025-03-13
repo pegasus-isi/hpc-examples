@@ -1,26 +1,38 @@
-# Pegasus WMS USC Tutorial
+# Pegasus Tutorial for Local HPC Cluster
 
-This repository contains preconfigured Pegasus Workflows examples including the Pegasus Tutorial, to run on USC CARC Discovery Cluster resources. 
+This repository contains preconfigured Pegasus workflow examples including the Pegasus Tutorial
+, to run on a local HPC resource. The tutorial and examples are meant to be launched via Jupyter 
+notebooks running on a node, where Pegasus and HTCondor are installed and configured to submit 
+workflows to the cluster.
+
+A recommended way to launch Jupyter notebooks is to do via the Open OnDemand install on your
+cluster. Instructions on how to get notebooks launched via OOD on the workflow submit node
+can be found here **XXX**.
+
+The screenhosts below are representative of the Open OnDemand install at USC CARC cluster.
+You can follow these on your local clusters Open OnDemand instance.
 
 ## Getting Started
-To get started, use a web browser and log on to USC OnDemand Instance at https://ondemand.carc.usc.edu . You need to be on USC Network and need to your USC credentials to log in. More details on how to logon to USC Open OnDemand can be found at https://www.carc.usc.edu/user-guides/carc-ondemand/ondemand-overview
+
+To get started, use a web browser and log on to your cluster's OnDemand Instance. 
+Typically the URL is like  https://ondemand.cluster.edu .
 
 To start a Jupyter notebook server, Click on Interactive Apps and then select JupyterLab.
 
 ![Start JupyterLab](./images/jupyterlab-start.png)
 
-When launching the Jupyter Lab, it is important to select the following
-* For Cluster, specify Discovery
+When launching the Jupyter Lab, it is important to select the following correctly.
+Your local sys admin can point you to the right values
+* For Cluster, specify the local cluster you want to submit to
 * For Account, specify the account you normally use, like ttrojan_123
-* For Partition, specify htcondor
+* For Partition, specify the **partition** that maps to the workflow submit node 
 * Set the number of CPUs to 1
 * Set Memory to 1GB
 * Set the number of hours to 4
 
-For the CARC Boot Camp 2024, please do the above with the following change:
-* For Account, specify hpcsuppt_613
-
-The above settings are important to ensure you start a JupyterLab Server on a node that has HTCondor installed and preconfigured to submit your workflows
+Please make sure that you specify the correct SLURM partition that maps to the workflow 
+submit node. This is to ensure you start a JupyterLab Server on a node
+that has HTCondor installed and preconfigured to submit your workflows
 
 ![Launch JupyterLab](./images/jupyterlab-launch.png)
 
