@@ -47,7 +47,7 @@ From there, Click on File -> New and then click on Terminal to get the terminal
 Once in the terminal, clone this GitHub Repository
 
 ```
-git clone https://github.com/pegasus-isi/pegasus-usc-tutorial.git
+git clone https://github.com/pegasus-isi/hpc-examples.git
 ```
 
 In Jupyter, navigate to the example you are interested in, and step through the notebook. 
