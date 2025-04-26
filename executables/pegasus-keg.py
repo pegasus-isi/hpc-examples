@@ -106,13 +106,15 @@ def get_hostname_and_ip():
 
 def read_file_to_buffer(filename):
     global buffer
-
+    indent="\t"
     try:
-        buffer.write("--- start {} ----\n".format(filename))
+        buffer.write("{}--- start {} ----\n".format(indent, filename))
         with open(filename, 'r') as file:
-            buffer.write(file.read())
-            buffer.write("\n")
-        buffer.write("--- end {} ----\n".format(filename))
+            for line in file:
+                buffer.write(indent)
+                buffer.write(line)
+                buffer.write("\n")
+        buffer.write("{}--- end {} ----\n".format(indent, filename))
     except Exception as e:
         logger.error("Unable to read input file {} to buffer: ".format(filename) + str(e))
         myexit(1)
@@ -123,11 +125,11 @@ def write_buffer_to_file(filename):
 
     try:
         with open(filename, 'w') as file:
-            file.write("===========================================================\n")
+            file.write("===================== contents start {} =====================\n".format(filename))
             file.write(get_hostname_and_ip())
             file.write("\n")
             file.write(buffer.getvalue())
-            file.write("===========================================================\n")
+            file.write("===================== contents end   {} =====================\n".format(filename))
     except Exception as e:
         logger.error("Unable to write output to file {}: ".format(filename) + str(e))
         myexit(1)
