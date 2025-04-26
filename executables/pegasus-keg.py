@@ -67,7 +67,7 @@ def setup_logger(verbose):
         console.setLevel(logging.DEBUG)
 
     # formatter
-    formatter = logging.Formatter("pegasus-keg: %(message)s")
+    formatter = logging.Formatter("pegasus-keg %(levelname)s: %(message)s")
     console.setFormatter(formatter)
     logger.addHandler(console)
     logger.debug("Logger has been configured")
@@ -183,10 +183,14 @@ def main():
 
     setup_logger(args.verbose)
 
+    # just log some hostname and ip
+    logger.info(get_hostname_and_ip())
+
     if args.inputs:
         for f in str.split(args.inputs, ","):
             logger.debug("input file pass is {}".format(f))
             read_file_to_buffer(f)
+    logger.debug("buffer contents after reading in all input files \n {}".format(buffer.getvalue()))
 
     if args.sleeptime:
         logger.debug("Sleeping for {} seconds".format(args.sleeptime))
@@ -206,8 +210,8 @@ def main():
             logger.debug("output file pass is {}".format(f))
             write_buffer_to_file(f)
 
-    logger.debug("buffer contents after reading in all input files \n {}".format(buffer.getvalue()))
-    logger.info(get_hostname_and_ip())
+    logger.info("Generated outputs to {}".format(args.outputs))
+
     sys.exit(0)
 
 
