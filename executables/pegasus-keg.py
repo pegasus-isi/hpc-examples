@@ -23,7 +23,6 @@ try:
 except Exception:
     PSUTIL_FOUND = False
 
-
 ##
 #  Copyright 2007-2017 University Of Southern California
 #
@@ -73,17 +72,6 @@ def setup_logger(verbose):
     logger.debug("Logger has been configured")
 
 
-def backticks(cmd_line):
-    """
-    what would a python program be without some perl love?
-    """
-    return (
-        subprocess.Popen(cmd_line, shell=True, stdout=subprocess.PIPE)
-        .communicate()[0]
-        .decode("utf-8")
-    )
-
-
 def myexit(rc):
     """
     system exit without a stack trace
@@ -106,7 +94,7 @@ def get_hostname_and_ip():
 
 def read_file_to_buffer(filename):
     global buffer
-    indent="\t"
+    indent = "\t"
     try:
         buffer.write("{}--- start {} ----\n".format(indent, filename))
         with open(filename, 'r') as file:
@@ -134,6 +122,7 @@ def write_buffer_to_file(filename):
         logger.error("Unable to write output to file {}: ".format(filename) + str(e))
         myexit(1)
 
+
 def mimic_cpu_usage(duration, target_load):
     """
     Mimics CPU usage for a specified duration and target load.
@@ -147,9 +136,10 @@ def mimic_cpu_usage(duration, target_load):
         current_cpu_usage = psutil.cpu_percent(interval=0.1)
         if current_cpu_usage < target_load:
             # Perform some computationally intensive task
-            _ = [i**2 for i in range(100000)]  # Example task
+            _ = [i ** 2 for i in range(100000)]  # Example task
         else:
-            time.sleep(0.1) # Wait to avoid exceeding the target load
+            time.sleep(0.1)  # Wait to avoid exceeding the target load
+
 
 # --- main ----------------------------------------------------------------------------
 
